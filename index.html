@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vector Stream AI Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
     body {
       margin: 0;
@@ -57,7 +58,7 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Vector Stream AI Solutions Logo" />
+    <img src="images/logo.png" alt="Vector Stream AI Solutions Logo" />
     <h1>Vector Stream AI Solutions</h1>
     <div class="tagline">Practical AI Solutions for Business and Education</div>
   </header>
@@ -96,5 +97,20 @@
     <p>© 2025 Vector Stream AI Solutions. All rights reserved.</p>
     <p>Email: rehan@vectorstreamai.com | Website: www.vectorstreamai.com</p>
   </footer>
+  <!-- Chatbot Widget -->
+<div id="chat-icon" class="chat-widget">💬</div>
+<div id="chat-box" class="chat-box hidden">
+  <div class="chat-header">Ask me anything <span id="close-chat" class="close-btn">×</span></div>
+  <div id="chat-messages" class="chat-messages"></div>
+  <div class="chat-input">
+    <textarea id="chat-input-field" placeholder="Type your message..."></textarea>
+    <button id="chat-send-btn">Send</button>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/chat.js"></script>
+<script src="js/voice-input.js"></script>
+
 </body>
 </html>

@@ -74,7 +74,7 @@ async function sendMessage() {
         "Content-Type": "application/json",
         "x-api-key": "mustaqbal-uni-key-2025"
       },
-      body: JSON.stringify({ message, role: "student" })
+      body: JSON.stringify({ message, role: "teacher" })
     });
 
     const data = await res.json();

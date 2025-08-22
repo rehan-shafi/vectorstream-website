@@ -101,17 +101,18 @@
   <!-- =====================================================
        VectorStream Chat Widget (via CDN)
        ===================================================== -->
-<script src="https://chatcdn.vectorstreamai.com/widget-latest.js" defer></script>
-<script>
-  window.VSWidget && window.VSWidget.init({
+<script
+  src="https://chatcdn.vectorstreamai.com/widget-latest.js"
+  onload="window.VSWidget && window.VSWidget.init({
     apiKey: 'vsai-2025-key-prod-001',
     chatUrl: 'https://chatapi.vectorstreamai.com/chat',
     role: 'default',
     title: 'Ask Assistant',
     theme: 'light',
     position: 'bottom-right'
-  });
+  });">
 </script>
+
 
 </body>
 </html>

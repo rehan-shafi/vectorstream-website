@@ -97,20 +97,35 @@
     <p>© 2025 Vector Stream AI Solutions. All rights reserved.</p>
     <p>Email: rehan@vectorstreamai.com | Website: www.vectorstreamai.com</p>
   </footer>
-  <!-- Chatbot Widget -->
-<div id="chat-icon" class="chat-widget">💬</div>
-<div id="chat-box" class="chat-box hidden">
-  <div class="chat-header">Ask me anything <span id="close-chat" class="close-btn">×</span></div>
-  <div id="chat-messages" class="chat-messages"></div>
-  <div class="chat-input">
-    <textarea id="chat-input-field" placeholder="Type your message..."></textarea>
-    <button id="chat-send-btn">Send</button>
-  </div>
-</div>
 
-<!-- Scripts -->
-<script src="js/chat.js"></script>
-<script src="js/voice-input.js"></script>
+  <!-- =====================================================
+       VectorStream Chat Widget (via CDN)
+       ===================================================== -->
+  <script>
+    (function () {
+      var s = document.createElement('script');
+      // If you version your widget, you can use: widget@1.0.0.js
+      s.src = 'https://chatcdn.vectorstreamai.com/widget-latest.js';
+      s.async = true;
+      s.onload = function () {
+        // NOTE: If your global is different (e.g., VHITWidget), change the name below.
+        if (!window.VSWidget || !window.VSWidget.init) {
+          console.error('VectorStream widget not found on window. Expected window.VSWidget.init().');
+          return;
+        }
+        window.VSWidget.init({
+          apiKey: 'vsai-2025-key-prod-001',
+          chatUrl: 'https://chatapi.vectorstreamai.com/chat',
+          role: 'default',
+          title: 'Ask Assistant',
+          theme: 'light',
+          position: 'bottom-right'
+        });
+      };
+      document.head.appendChild(s);
+    })();
+  </script>
 
+  <!-- (removed old static chatbot: chat-icon/chat-box divs and js/chat.js, js/voice-input.js) -->
 </body>
 </html>
